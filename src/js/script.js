@@ -90,6 +90,12 @@ const changeControls = () => {
 
     takeQuery.controls[3].onclick = () => {
         minutes -= 5;
+
+        if(minutes < 0) {
+            takeQuery.controls[1].classList.remove("stop")
+            clear()
+            pause()
+        }
     }
 }
 
@@ -217,19 +223,17 @@ const changeControlsMusic = () => {
         
         if(takeQuery.controlsMusic[2].classList.contains("playMusic")) {
 
-            if(takeQuery.audio[2].paused) {
-                let teste = takeQuery.audio[2].play()
-                .catch(err => {
-                
-                    console.log("ERRO", err)
-                }).finally( () => {
-                    takeQuery.audio[2].play()
-                })
+            const playAudio = takeQuery.audio[2].play();
 
-                console.log(teste)
+            if(playAudio !== undefined) {
+                playAudio.then(() => {
+                    takeQuery.audio[2].pause();
+                })
+                .catch(err => {
+                    console.log(err)
+                })
             }
             
-
             const takeAudio = takeQuery.audio[2];
             const removeAudio = takeQuery.audio.indexOf(takeAudio)
 
