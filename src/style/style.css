@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 19.2rem;
+}
+
+.block {
+    width: min(25rem, 100%);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.6rem;
+
+}
+
+h1 {
+    font-size: 9.6rem;
+}
+
+
+
+.controls {
+    width: 100%;
+    border-radius: 50px;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 0rem 4rem;
+}    
+
+button {
+    background-repeat: no-repeat;
+    background: none;
+    border: none;
+    cursor: pointer;
+    
+}
+
+
+
+.controls button {   
+    height: auto;
+    width: 100%;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.controls img {
+    width: 4.8rem;
+}
+.controlsMusic {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem;
+}
+
+.controlsMusic div {
+    background: #E1E1E6;
+    border-radius: 2.4rem;
+}
+
+.controlsMusic button {
+    width: 13.8rem;
+    height: 15.2rem;
+    border-radius: 2.4rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+
+}
+
+.select {
+    background: #02799D;
+}
+
+/*Variables */
+
+
+/* Black */
+.forrestBlack {
+    background-image: url("../svg/black/forrestBlack.svg");
+}
+
+
+.rainBlack {
+    background-image: url("../svg/black/rainBlack.svg");
+} 
+
+.houseBlack {
+    background-image: url("../svg/black/houseBlack.svg");
+}
+
+.fireBlack {
+    background-image: url("../svg/black/fireBlack.svg");
+}
+
+/* White */
+
+.forrestWhite {
+    background-image: url("../svg/white/forrestWhite.svg");
+}
+
+.rainWhite {
+    background-image: url("../svg/white/rainWhite.svg");
+}
+
+
+.stop {
+    background-image: url("../svg/stop-circle.svg");
+}
+
+
+
+@media (max-width: 50rem) {
+    main {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .controls {
+        gap: 3rem;
+    }
+}
