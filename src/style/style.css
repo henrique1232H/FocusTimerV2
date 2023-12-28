@@ -125,6 +125,13 @@ button {
     background-image: url("../svg/white/rainWhite.svg");
 }
 
+.houseWhite {
+    background-image: url("../svg/white/houseWhite.svg");
+}
+
+.fireWhite {
+    background-image: url("../svg/white/fireWhite.svg");
+}
 
 .stop {
     background-image: url("../svg/stop-circle.svg");

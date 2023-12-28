@@ -99,7 +99,11 @@ const changeControlsMusic = () => {
     takeQuery.controlsMusic[0].onclick = () => {
         takeQuery.controlsMusic[0].classList.toggle("playMusic");
         takeQuery.controlsMusic[0].classList.toggle("select");
-        takeQuery.controlsMusic[0].classList.toggle("forrestWhite")
+        takeQuery.controlsMusic[0].classList.toggle("forrestWhite");
+
+        takeQuery.controlsMusic[2].classList.remove("houseWhite")
+        takeQuery.controlsMusic[1].classList.remove("rainWhite");
+        takeQuery.controlsMusic[3].classList.remove("fireWhite");
 
         let takeControlMusic0 = takeQuery.controlsMusic.shift()
 
@@ -136,6 +140,11 @@ const changeControlsMusic = () => {
     takeQuery.controlsMusic[1].onclick = () => {
         takeQuery.controlsMusic[1].classList.toggle("playMusic");
         takeQuery.controlsMusic[1].classList.toggle("select");
+        takeQuery.controlsMusic[1].classList.toggle("rainWhite");
+
+        takeQuery.controlsMusic[0].classList.remove("forrestWhite")
+        takeQuery.controlsMusic[2].classList.remove("houseWhite");
+        takeQuery.controlsMusic[3].classList.remove("fireWhite");
 
         const takeControlMusic1 = takeQuery.controlsMusic[1];
         const indice = 1
@@ -185,6 +194,11 @@ const changeControlsMusic = () => {
     takeQuery.controlsMusic[2].onclick = () => {
         takeQuery.controlsMusic[2].classList.toggle("playMusic");
         takeQuery.controlsMusic[2].classList.toggle("select");
+        takeQuery.controlsMusic[2].classList.toggle("houseWhite");
+
+        takeQuery.controlsMusic[0].classList.remove("forrestWhite")
+        takeQuery.controlsMusic[1].classList.remove("rainWhite");
+        takeQuery.controlsMusic[3].classList.remove("fireWhite");
 
         const takeControlMusic = takeQuery.controlsMusic[2];
         const indice = 2
@@ -245,6 +259,11 @@ const changeControlsMusic = () => {
 
         takeQuery.controlsMusic[3].classList.toggle("playMusic");
         takeQuery.controlsMusic[3].classList.toggle("select");
+        takeQuery.controlsMusic[3].classList.toggle("fireWhite");
+
+        takeQuery.controlsMusic[0].classList.remove("forrestWhite")
+        takeQuery.controlsMusic[1].classList.remove("rainWhite");
+        takeQuery.controlsMusic[2].classList.remove("houseWhite");
 
         const takeControlMusic = takeQuery.controlsMusic[3];
         const indice = 3
