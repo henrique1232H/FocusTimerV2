@@ -1,11 +1,46 @@
 import { takeQuerySelector } from "./takeQuery.js";
 import changeControlsMusic from "./changeControlsMusic.js";
-import { minutes, interval, count } from "./count.js";
 
 
 const takeQuery = takeQuerySelector();
-console.log(takeQuery)
 
+
+let seconds = 0;
+let minutes = 0;
+let interval;
+
+const count = () => {
+    
+    interval = setInterval(() => {
+        seconds++;
+        
+        
+        if(seconds > 0 && seconds <= 9) {
+            takeQuery.h1.innerHTML = `0${minutes}:0${seconds}`;
+            
+        }
+        if(seconds >= 10){
+            takeQuery.h1.innerHTML = `0${minutes}:${seconds}`
+        }
+        
+        if(seconds >= 60) {
+            seconds = 0;
+            minutes++;
+            
+        }
+
+        if(minutes > 9 && seconds > 0 && seconds <= 9) {
+            takeQuery.h1.innerHTML = `${minutes}:0${seconds}`
+        }
+        
+        if(minutes > 9 && seconds >= 10) {
+            takeQuery.h1.innerHTML  =`${minutes}:${seconds}`
+        }
+
+    }, 1000);
+    
+    
+}
 
 const changeControls = () => {
     takeQuery.controls[0].addEventListener("click", () => {
