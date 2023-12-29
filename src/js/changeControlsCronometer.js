@@ -97,4 +97,4 @@ const clear = () => {
 }
 
 
-export {changeControls}
+export default changeControls
